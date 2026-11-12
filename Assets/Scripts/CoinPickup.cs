@@ -9,7 +9,10 @@ public class CoinPickup : MonoBehaviour
 
     void OnTriggerEnter2D()  //Plays Sound Whenever collision detected
     {
-        GetComponent<AudioSource>().Play();
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        Destroy(gameObject);
+        Debug.Log("coin collected!");
     }
 
     // Update is called once per frame
