@@ -999,6 +999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8ea312da41fc943be9d8d4ff751ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
+  sprite: {fileID: 1120364935}
+  collider2d: {fileID: 1120364933}
+  audiosource: {fileID: 1120364937}
 --- !u!212 &1120364935
 SpriteRenderer:
   serializedVersion: 2

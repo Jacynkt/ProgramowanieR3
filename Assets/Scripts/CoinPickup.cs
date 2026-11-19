@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private Collider2D collider2d;
+    [SerializeField] private AudioSource audiosource;
+    private UI ui;
     void Start()
     {
+        ui = FindAnyObjectByType<UI>();
     }
 
     void OnTriggerEnter2D()  //Plays Sound Whenever collision detected
     {
-        GetComponent<AudioSource>().Play();
+        audiosource.Play();
+        sprite.enabled = false;
+        collider2d.enabled = false;
+        ui.score++;
+        Debug.Log("coin collected!");
     }
 
     // Update is called once per frame
